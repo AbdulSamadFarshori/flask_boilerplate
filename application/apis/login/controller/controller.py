@@ -2,13 +2,13 @@ from flask_restplus import Namespace, Resource, reqparse
 from application.apis.login.service.service import authentication
 from flask import request
 
-Api = Namespace('login', description='login operations')
-ApiModel = Api.model("User", User.schema())
+nsApi = Namespace('login', description='login operations')
+#ApiModel = Api.model("User", User.schema())
 
-@Api.route('/')
+@nsApi.route('/login')
 class login(Resource):
-    @Api.doc('verify the user')
-    @Api.marshal_with(ApiModelList)
+    @nsApi.doc('verify the user')
+    #@Api.marshal_with(ApiModelList)
     @errorHandler
     def post(self):
         parser = reqparse.RequestParser()
