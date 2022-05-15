@@ -9,7 +9,7 @@ nsApi = Namespace('login', description='login operations')
 class login(Resource):
     @nsApi.doc('verify the user')
     #@Api.marshal_with(ApiModelList)
-    @errorHandler
+    # @errorHandler
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument('username', type=str)

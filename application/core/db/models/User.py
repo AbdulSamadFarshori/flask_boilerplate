@@ -5,8 +5,8 @@ from application import marshmallow
 
 
 class User(Base):
-    usename = db.Column(db.string(255), nullable=False)
-    password = usename = db.Column(db.string(255), nullable=False)
+    usename = db.Column(db.String(255), nullable=False)
+    password = usename = db.Column(db.String(255), nullable=False)
 
 class UserSchema(marshmallow.SQLAlchemyAutoSchema):
     class Meta:

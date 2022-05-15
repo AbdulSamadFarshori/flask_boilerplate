@@ -1,12 +1,13 @@
 from flask_restplus import fields
 from application import db
+from datetime import datetime
 
 
 class Base(db.Model):
     __abstract__ = True
     id = db.Column(db.Integer, primary_key=True)
-    api_created_at = db.Column(db.Datetime, nullable=False, default=datetime.utcnow)
-    api_status = db.Column(db.boolean, nullable=False, default=True)
+    api_created_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    api_status = db.Column(db.Boolean, nullable=False, default=True)
 
     #########
     # MARSHAL

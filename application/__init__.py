@@ -6,6 +6,12 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 
 
+import werkzeug
+werkzeug.cached_property = werkzeug.utils.cached_property
+import flask.scaffold
+flask.helpers._endpoint_from_view_func = flask.scaffold._endpoint_from_view_func
+
+
 app = Flask(__name__)
 CORS(app)
 

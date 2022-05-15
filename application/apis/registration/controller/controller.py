@@ -1,5 +1,5 @@
 from flask import request
-from flask_restful import Namespace, Resource, reqparse
+from flask_restplus import Namespace, Resource, reqparse
 from application.apis.registration.service.service import user_register
 
 nsApi = Namespace("registration", description="registration related operations")
