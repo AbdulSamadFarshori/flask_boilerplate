@@ -21,6 +21,7 @@ marshmallow = Marshmallow(app)
 
 # import models here from core/models
 from application.core.db.models.User import User
+from application.core.db.models.scan import Scan
 #-------------
 
 db.create_all()

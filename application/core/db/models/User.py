@@ -4,8 +4,9 @@ from application import marshmallow
 
 
 
+
 class User(Base):
-    usename = db.Column(db.String(255), nullable=False)
+    username = db.Column(db.String(255), nullable=False)
     password = usename = db.Column(db.String(255), nullable=False)
 
 class UserSchema(marshmallow.SQLAlchemyAutoSchema):
